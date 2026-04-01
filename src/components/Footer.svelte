@@ -30,24 +30,24 @@
       name: "Spotify",
       link: "#",
       icon: "fa-brands fa-spotify",
-      color: 'text-green-500'
+      color: 'hover:text-green-500'
     },
     {
       name: "Instagram",
       link: "#",
       icon: "fa-brands fa-instagram",
-      color: 'text-purple-500'
+      color: 'hover:text-purple-500'
     },
     {
       name: "Amazon Music",
       link: "#",
       icon: "fa-brands fa-amazon",
-      color: 'text-nutral-80'
+      color: 'hover:text-blue-800'
     },
   ];
 </script>
 
-<footer class="flex flex-col gap-4 items-center bg-zinc-100 border-t-2 border-zinc-200/60 pt-8 md:px-8 lg:px-16">
+<footer class="flex flex-col gap-4 items-center bg-zinc-100 border-t-2 border-zinc-200/60 pt-8 px-8 lg:px-32">
   <div class="flex flex-col gap-6 md:flex-row md:justify-between  items-center w-full py-4 ">
     <a href="/" class="flex justify-center hover:opacity-90 md:items-center ">
       <img
@@ -68,9 +68,9 @@
     </nav>
 
      <!-- Social Media Links -->
-    <nav class=" flex flex-row items-center gap-6 justify-center font-medium text-2xl ">
+    <nav class=" flex flex-row items-center gap-6 lg:gap-4 justify-center font-medium text-2xl ">
       {#each mediaNavs as nav}
-        <a href={nav.link} title={nav.name} class="hover:text-zinc-600">
+        <a href={nav.link} title={nav.name} class={"p-1 " + nav.color}>
           
           <i class={nav.icon + ''}></i>
         </a>
@@ -85,4 +85,5 @@
 
 <style>
   /* your styles go here */
+
 </style>

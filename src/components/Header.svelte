@@ -29,7 +29,7 @@
 -->
 
 <header class="p-2 border-b-2 border-zinc-200/70 bg-zinc-100">
-  <div class="flex flex-row items-center justify-between w-full px-4 lg:px-8">
+  <div class="flex flex-row items-center justify-between w-full px-8 lg:px-32">
     <a href="/" class="flex justify-center hover:opacity-90">
       <img
         src="/images/logo-removebg-preview.png"
