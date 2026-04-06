@@ -3,6 +3,8 @@
   import favicon from "$lib/assets/favicon.svg";
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
+  import Modal from "svelte-simple-modal";
+
   import {
     INITIAL_INNER_HEIGHT,
     INITIAL_INNER_WIDTH,
@@ -39,7 +41,9 @@
     </button>
   </div>
   <Header />
-  {@render children()}
+  <Modal>
+    {@render children()}
+  </Modal>
   <Footer />
 </div>
 

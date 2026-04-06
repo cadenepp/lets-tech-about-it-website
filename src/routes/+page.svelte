@@ -1,9 +1,14 @@
-<script>
+<script lang="ts">
+
   import Main from "../components/Main.svelte";
+
+
+  
 </script>
 
-<!-- markup (zero or more items) goes here -->
 <Main />
+
+<!-- markup (zero or more items) goes here -->
 
 <style>
 </style>
