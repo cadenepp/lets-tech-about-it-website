@@ -1,3 +1,37 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@theme{
+  --color-p1: #0F1115;
+  --color-s1: #1a1d23;
+  --color-card: #2a2f38;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e5e7eb;
+  --color-text-muted: #6b7280;
+
+  --color-primary-300: #f5b800;
+  --color-primary-600: #ffd24A;
+  --color-primary-800: #c99700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto Slab", serif;
+  color: var(--color-zinc-800);
+}
+
+.roboto {
+  font-family: "Roboto Slab", serif;
+}
