@@ -87,57 +87,7 @@
       </p>
 
       <PrimaryButton title="Join Us" onClick={openContactModal} />
-      {#if isContactOpen}
-        <!-- content here -->
-        <Modal onClose={closeContactModal} isOpen={isContactOpen}>
-          <div class="flex flex-col gap-4 justify-center items-center">
-            <h1 class="font-bold text-lg">Contact Infomation</h1>
-            <div class="bg-white p-1 px-4 rounded-lg shadow">
-              <input
-                type="text"
-                value={contactEmail}
-                readonly
-                class=" outline-0 border-0"
-              />
-              <button
-                onclick={copyContactToClipboard}
-                title="Copy to Clipboard"
-                class=""
-              >
-                <i class="fa-regular fa-clipboard"></i></button
-              >
-            </div>
-            <div>
-              <button
-                title="Send by Gmail"
-                class="w-fit px-10 py-2 rounded-lg bg-s1 shadow text-zinc-200"
-                onclick={sendAnEmailGmail}
-              >
-                <i class="fa-brands fa-google"></i>
-              </button>
-              <button
-                title="Send by Gmail"
-                class="w-fit px-10 py-2 rounded-lg bg-s1 shadow text-zinc-200"
-                onclick={sendAnEmailYahoo}
-              >
-                <i class="fa-brands fa-yahoo"></i>
-              </button>
-              <button
-                title="Send by Gmail"
-                class="w-fit px-10 py-2 rounded-lg bg-s1 shadow text-zinc-200"
-                onclick={sendAnEmailYahoo}
-              >
-                📥
-              </button>
-            </div>
-            <span
-              class={isCopyed == "✅ Copied"
-                ? "text-green-400"
-                : "text-red-400"}>{isCopyed}</span
-            >
-          </div>
-        </Modal>
-      {/if}
+      
     </div>
 
     <!-- Small Media Display Section -->
@@ -210,7 +160,7 @@
           help us foster a richer dialogue and build a stronger community around the
           topics we cover.
         </p>
-        <PrimaryButton otherStyle={"px-12 py-2.5"} title="Join Us" />
+        <PrimaryButton otherStyle={"px-12 py-2.5"} title="Join Us" onClick={openContactModal}/>
       </div>
     </article>
   </section>
@@ -243,9 +193,61 @@
         Small but mighty — our listeners are active builders, not passive
         scrollers.
       </p>
-      <PrimaryButton title="Get in Touch" otherStyle=" mt-8" />
+      <PrimaryButton title="Get in Touch" otherStyle=" mt-8" onClick={openContactModal} />
     </div>
   </section>
+
+  {#if isContactOpen}
+        <!-- content here -->
+        <Modal onClose={closeContactModal} isOpen={isContactOpen}>
+          <div class="flex flex-col gap-4 justify-center items-center">
+            <h1 class="font-bold text-lg">Contact Infomation</h1>
+            <div class="bg-white p-1 px-4 rounded-lg shadow">
+              <input
+                type="text"
+                value={contactEmail}
+                readonly
+                class=" outline-0 border-0"
+              />
+              <button
+                onclick={copyContactToClipboard}
+                title="Copy to Clipboard"
+                class=""
+              >
+                <i class="fa-regular fa-clipboard"></i></button
+              >
+            </div>
+            <div>
+              <button
+                title="Send by Gmail"
+                class="w-fit px-10 py-2 rounded-lg bg-s1 shadow text-zinc-200"
+                onclick={sendAnEmailGmail}
+              >
+                <i class="fa-brands fa-google"></i>
+              </button>
+              <button
+                title="Send by Gmail"
+                class="w-fit px-10 py-2 rounded-lg bg-s1 shadow text-zinc-200"
+                onclick={sendAnEmailYahoo}
+              >
+                <i class="fa-brands fa-yahoo"></i>
+              </button>
+              <button
+                title="Send by Gmail"
+                class="w-fit px-10 py-2 rounded-lg bg-s1 shadow text-zinc-200"
+                onclick={sendAnEmailYahoo}
+              >
+                📥
+              </button>
+            </div>
+            <span
+              class={isCopyed == "✅ Copied"
+                ? "text-green-400"
+                : "text-red-400"}>{isCopyed}</span
+            >
+          </div>
+        </Modal>
+      {/if}
 </main>
 
 <style>
