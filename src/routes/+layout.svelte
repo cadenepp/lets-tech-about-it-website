@@ -19,6 +19,7 @@
   const goTop = () => {
     document.body.scrollIntoView();
   };
+
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>

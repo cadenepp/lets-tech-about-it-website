@@ -7,18 +7,18 @@
   let { host }: propsType = $props();
 
   // your script goes here
-  let imgeurl =
-    "https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?&h=750&w=1260";
 </script>
 
 <article
   class="card card--1 mr-6.25 lg:w-1/3 bg-white w-full relative rounded-xl overflow-hidden h-full"
 >
   <div
-    class="card__img invisible bg-cover bg-center bg-no-repeat w-full h-60 rounded-t-xl"
+    class="invisible bg-cover bg-center bg-no-repeat w-full h-60 rounded-t-xl"
+    style={`background-image: url(/images/${host.imgeURl})`}
   ></div>
   <a href={host.linkedInLink} title="card_link">
     <div
+      style={`background-image: url(/images/${host.imgeURl})`}
       class="card__img--hover top-0 bg-cover bg-center bg-no-repeat w-full absolute h-60 rounded-t-xl"
     ></div>
   </a>
@@ -39,11 +39,12 @@
 </article>
 
 <style>
-  /* your styles go here */
+  /* your styles go here
   .card--1 .card__img,
   .card--1 .card__img--hover {
-    background-image: url("https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+
   }
+  */
   .card {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);

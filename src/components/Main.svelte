@@ -13,10 +13,10 @@
   const bgImage = "/images/IMG_49401.png";
   const adsSectionImg = "/images/deep-umFjugV4fZ4-unsplash.jpg";
 
-  const contactEmail = "abc@gmail.com";
-  const MailLink = "mailto:recipient@example.com?subject=Hello&body=Hello%20World"
-  const yahooLink = "http://compose.mail.yahoo.com/?to=recipient@example.com";
-  const gmailLink = "https://mail.google.com/mail/u/0/?to=recipient@example.com&su=Subject&body=Message&tf=cm";
+  const contactEmail = "contact@letstechabit.com";
+  const MailLink = "mailto:contact@letstechabit.com?subject=Hello&body=Hello%20World"
+  const yahooLink = "http://compose.mail.yahoo.com/?to=contact@letstechabit.com";
+  const gmailLink = "https://mail.google.com/mail/u/0/?to=contact@letstechabit.com&su=Subject&body=Message&tf=cm";
 
   let isContactOpen = $state(true);
   let isCopyed = $state("");
@@ -178,8 +178,9 @@
   </section>
 
   <!-- Ads Section / Partner Section -->
+  <!--id={"sponsor-ad partner-ad"}-->
   <section
-    id={"sponsor-ad partner-ad"}
+    id="contact"
     class="flex flex-col lg:px-32 px-8 h-full justify-center items-center"
   >
     <div
