@@ -30,7 +30,7 @@
   onkeydown={(e) => e.key === 'Enter' || e.key === ' ' ? props.onClose?.() : null}
 >
   <div
-    class="modal relative bg-zinc-100 w-fit p-12 rounded-lg z-1000 mx-auto flex flex-col justify-center items-center"
+    class="modal relative bg-zinc-200 w-fit p-6 lg:p-12 rounded-lg z-1000 mx-auto flex flex-col justify-center items-center "
     
   >
     <button

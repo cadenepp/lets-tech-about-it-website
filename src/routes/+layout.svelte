@@ -1,6 +1,6 @@
 <script lang="ts">
   import "./layout.css";
-  import favicon from "$lib/assets/favicon.svg";
+  import favicon from "/images/favicon-32x32.png";
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
   import Modal from "svelte-simple-modal";
