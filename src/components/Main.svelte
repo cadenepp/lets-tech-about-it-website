@@ -18,7 +18,7 @@
   const yahooLink = "http://compose.mail.yahoo.com/?to=contact@letstechabit.com";
   const gmailLink = "https://mail.google.com/mail/u/0/?to=contact@letstechabit.com&su=Subject&body=Message&tf=cm";
 
-  let isContactOpen = $state(true);
+  let isContactOpen = $state(false);
   let isCopyed = $state("");
 
   const openContactModal = () => (isContactOpen = true);
@@ -218,28 +218,28 @@
                 <i class="fa-regular fa-clipboard"></i></button
               >
             </div>
-            <div>
+            <div class="flex flex-row flex-1 gap-3 w-full">
               <button
                 title="Send by Gmail"
-                class="w-fit px-10 py-2 rounded-lg bg-s1 shadow text-zinc-200"
+                class=" px-10 py-2 rounded-lg flex-auto bg-s1 shadow text-zinc-200 hover hover:bg-s1/90 hover:shadow-lg hover:scale-105 duration-200 cursor-pointer"
                 onclick={sendAnEmailGmail}
               >
                 <i class="fa-brands fa-google"></i>
               </button>
               <button
                 title="Send by Gmail"
-                class="w-fit px-10 py-2 rounded-lg bg-s1 shadow text-zinc-200"
+                class=" px-10 py-2 rounded-lg flex-auto bg-s1 shadow text-zinc-200 hover hover:bg-s1/90 hover:shadow-lg hover:scale-105 duration-200 cursor-pointer"
                 onclick={sendAnEmailYahoo}
               >
                 <i class="fa-brands fa-yahoo"></i>
               </button>
-              <button
+              <!-- <button
                 title="Send by Gmail"
                 class="w-fit px-10 py-2 rounded-lg bg-s1 shadow text-zinc-200"
                 onclick={sendAnEmailYahoo}
               >
                 📥
-              </button>
+              </button> -->
             </div>
             <span
               class={isCopyed == "✅ Copied"
